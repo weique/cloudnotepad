@@ -1,0 +1,19 @@
+{
+	"name": "cloudnotepad",
+	"compatibility_date": "2026-02-19",
+	"main": "./platforms/cloudflare/worker.ts",
+	"assets": {
+		"directory": "./dist/",
+		"not_found_handling": "single-page-application",
+		"binding": "ASSETS",
+		"run_worker_first": [
+			"/api/*"
+		]
+	},
+	"kv_namespaces": [
+		{
+			"binding": "KV",
+			"id": "62a18879652e46788cf1ecd056e23caf"
+		}
+	]
+}
